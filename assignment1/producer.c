@@ -55,9 +55,7 @@ int main()
     }
 
     // Map shared memory into our process
-    buffer_t *buf = mmap(NULL, sizeof(buffer_t),
-                         PROT_READ | PROT_WRITE, MAP_SHARED,
-                         shm_fd, 0);
+    buffer_t *buf = mmap(NULL, sizeof(buffer_t), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
     if (buf == MAP_FAILED)
     {
         perror("mmap failed");

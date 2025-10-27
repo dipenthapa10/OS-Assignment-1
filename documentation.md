@@ -4,6 +4,30 @@ This project is a solution to the Producer-Consumer problem in Operating Systems
 that run at the same time and share information through a shared memory buffer. Semaphores are used so that both processes do not access the buffer 
 at the same time. This prevents data corruption and shows how synchronization works in real systems.
 
+# how the results looks like 
+Producer: Starting...
+Producer: Shared memory and semaphores initialized
+Producer: Starting production...
+Consumer: Starting...
+Consumer connected to shared memory and semaphores
+Consumer starting consumption...
+
+Producer produced 1 at position 0
+Producer produced 2 at position 1
+Consumer consumed 1 from position 0
+Producer produced 3 at position 0
+Consumer consumed 2 from position 1
+Producer produced 4 at position 1
+Consumer consumed 3 from position 0
+Producer produced 5 at position 0
+Consumer consumed 4 from position 1
+Producer produced 6 at position 1
+Consumer consumed 5 from position 0
+Producer produced 7 at position 0
+Consumer consumed 6 from position 1
+
+... (this pattern continues forever until I stop the programs)
+
 # Explanation of Key Components
 
 Shared Memory - Our Shared Table
